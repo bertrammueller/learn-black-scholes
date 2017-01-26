@@ -1,7 +1,11 @@
 from data_generator import *
 import os
+import argparse
 
-n_samples = 1000000
+parser = argparse.ArgumentParser(description='Generate training data for black scholes.')
+parser.add_argument('n', metavar='N', type=int, nargs=1, help='number of samples')
+
+n_samples = parser.parse_args().n[0]
 tdg = DataGenerator()
 X = tdg.generate_random_input(n_samples)    # X is input matrix [ samples x inputvector ]
 Y = tdg.generate_output(X)
