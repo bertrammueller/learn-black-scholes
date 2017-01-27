@@ -7,10 +7,10 @@ class DataGenerator():
 
     def generate_random_input(self, n):
         ratio_strike_underlying = np.random.uniform(0.5, 1.5, n) # K/S
-        time = np.random.uniform(0, 220, n)                      # time until expiration in days
-        rate = np.random.uniform(0.8, 1.2, n)                    # Annualized risk free rate
-        sigma = np.random.uniform(0.01, 2.0, n)                  # Standard Deviation of stock's returns
-        dividend = np.random.uniform(0.8, 1.2, n)                # Dividend yield
+        time = np.random.uniform(0, 600, n)                      # time until expiration in days
+        rate = np.random.uniform(-0.2, 0.2, n)                   # Annualized risk free rate
+        sigma = np.random.uniform(0.0001, 2.0, n)                # Standard Deviation of stock's returns
+        dividend = np.random.uniform(0.0, 0.2, n)                # Dividend yield
         return np.matrix([ratio_strike_underlying, time, rate, sigma, dividend]).transpose()
 
     def calc_black_scholes(self, x):
