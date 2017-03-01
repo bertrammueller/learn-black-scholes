@@ -5,7 +5,7 @@ Running this with 1e6 samples takes some time and results in 50MB of numpy binar
 ### Install
 install miniconda if not available on system
 
-> conda create -n bsenv python=3.5
-> source activate bsenv
-> conda install numpy scipy scikit-learn pandas jupyter
-> jupyter notebook
+conda create -n bsenv python=3.5  
+source activate bsenv  
+conda install numpy scipy scikit-learn pandas jupyter  
+jupyter notebook  
